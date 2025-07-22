@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/input.css" />
+    <link rel="stylesheet" href="src/output.css" />
+  </head>
+  <body>
+    <!-- starting page start  -->
+
+    <section class="py-[90px] font-poppins bg-black/20" id="starting">
+      <div class="max-w-mContainer m-auto">
+        <div class="bg-white py-[199px] text-center">
+          <h2 class="font-bold text-black text-5xl">Wanna Play game?</h2>
+          <input
+            type="text"
+            placeholder="What is your name"
+            id="p1name"
+            class="rounded-full border-2 border-[#D9D9D9] w-[886px] py-[42px] pl-[52px] my-9"
+          />
+          <button
+            class="py-[15px] px-[86px] mb-11.5 font-bold text-[32px] text-white bg-[#7041D3] rounded-full cursor-pointer"
+            id="btnstart_1"
+          >
+            Start Game
+          </button>
+          <h3
+            class="bg-[#CC3030] font-bold text-[#7041D3] text-5xl w-[778px] m-auto py-2.5 hidden"
+            id="nameError_1"
+          >
+            Name Is Missing
+          </h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- starting page end  -->
+
+    <!-- Player one page start  -->
+    <section class="py-[90px] font-poppins bg-black/20 hidden" id="player_1">
+      <div class="max-w-mContainer m-auto">
+        <div class="bg-white py-[199px] text-center">
+          <h2 class="font-bold text-black text-5xl">Player - 1</h2>
+          <input
+            type="number" 
+            placeholder="Give a number"
+            id="p1number"
+            class="rounded-full border-2 border-[#D9D9D9] w-[886px] py-[42px] pl-[52px] my-9 block m-auto"
+          />
+          <button
+            class="py-[15px] px-[86px] mb-11.5 font-bold text-[32px] text-white bg-[#7041D3] rounded-full cursor-pointer"
+            id="btnplay"
+          >
+            Let’s Play
+          </button>
+          <h3
+            class="bg-[#CC3030] font-bold text-[#7041D3] text-5xl w-[778px] m-auto py-2.5 hidden"
+            id="numbererror_1"
+          >
+            Please give a number
+          </h3>
+        </div>
+      </div>
+    </section>
+    <!-- Player one  page end  -->
+
+    <!-- Player two starting page start  -->
+    <section
+      class="py-[90px] font-poppins bg-black/20 hidden"
+      id="player_2start"
+    >
+      <div class="max-w-mContainer m-auto">
+        <div class="bg-white py-[199px] text-center">
+          <h2 class="font-bold text-black text-5xl">Player - 2 Name</h2>
+          <input
+            type="text"
+            placeholder="What is your name"
+            id="p2name"
+            class="rounded-full border-2 border-[#D9D9D9] w-[886px] py-[42px] pl-[52px] my-9"
+          />
+          <button
+            class="py-[15px] px-[86px] mb-11.5 font-bold text-[32px] text-white bg-[#7041D3] rounded-full cursor-pointer"
+            id="btnstart_2"
+          >
+            Start Game
+          </button>
+          <h3
+            class="bg-[#CC3030] font-bold text-[#7041D3] text-5xl w-[778px] m-auto py-2.5 hidden"
+            id="nameError_2"
+          >
+            Name Is Missing
+          </h3>
+        </div>
+      </div>
+    </section>
+    <!-- Player two  page end  -->
+
+    <!-- player two  start  -->
+    <section
+      class="py-[90px] font-poppins bg-black/20 hidden"
+      id="player_2guess"
+    >
+      <div class="max-w-mContainer m-auto">
+        <div class="bg-white py-[199px] text-center">
+          <h2 class="font-bold text-black text-5xl">Player - 2</h2>
+          <input
+            type="number"
+            placeholder="Give a number"
+            id="p2number"
+            class="rounded-full border-2 border-[#D9D9D9] w-[886px] py-[42px] pl-[52px] my-9 block m-auto"
+          />
+          <button
+            class="py-[15px] px-[86px] mb-11.5 font-bold text-[32px] text-white bg-[#7041D3] rounded-full cursor-pointer"
+            id="guess_1"
+          >
+            Guess
+          </button>
+          <h3
+            class="bg-[#CC3030] font-bold text-[#7041D3] text-5xl w-[778px] m-auto py-2.5 hidden"
+            id="numbererror_2"
+          >
+            Please give a number
+          </h3>
+        </div>
+      </div>
+    </section>
+    <!-- player two  page end  -->
+
+    <!-- Player three starting page start  -->
+    <section
+      class="py-[90px] font-poppins bg-black/20 hidden"
+      id="player_3start"
+    >
+      <div class="max-w-mContainer m-auto">
+        <div class="bg-white py-[199px] text-center">
+          <h2 class="font-bold text-black text-5xl">Player - 3 Name</h2>
+          <input
+            type="text"
+            placeholder="What is your name"
+            id="p3name"
+            class="rounded-full border-2 border-[#D9D9D9] w-[886px] py-[42px] pl-[52px] my-9"
+          />
+          <button
+            class="py-[15px] px-[86px] mb-11.5 font-bold text-[32px] text-white bg-[#7041D3] rounded-full cursor-pointer"
+            id="btnstart_3"
+          >
+            Start Game
+          </button>
+          <h3
+            class="bg-[#CC3030] font-bold text-[#7041D3] text-5xl w-[778px] m-auto py-2.5 hidden"
+            id="nameError_3"
+          >
+            Name Is Missing
+          </h3>
+        </div>
+      </div>
+    </section>
+    <!-- Player three  page end  -->
+
+    <!-- player three  start  -->
+    <section
+      class="py-[90px] font-poppins bg-black/20 hidden"
+      id="player_3guess"
+    >
+      <div class="max-w-mContainer m-auto">
+        <div class="bg-white py-[199px] text-center">
+          <h2 class="font-bold text-black text-5xl">Player - 3</h2>
+          <input
+            type="number"
+            placeholder="Give a number"
+            id="p3number"
+            class="rounded-full border-2 border-[#D9D9D9] w-[886px] py-[42px] pl-[52px] my-9 block m-auto"
+          />
+          <button
+            class="py-[15px] px-[86px] mb-11.5 font-bold text-[32px] text-white bg-[#7041D3] rounded-full cursor-pointer"
+            id="guess_2"
+          >
+            Guess
+          </button>
+          <h3
+            class="bg-[#CC3030] font-bold text-[#7041D3] text-5xl w-[778px] m-auto py-2.5 hidden"
+            id="numbererror_3"
+          >
+            Please give a number
+          </h3>
+        </div>
+      </div>
+    </section>
+    <!-- player three  page end  -->
+
+    <!-- game over page start  -->
+    <section class="py-[90px] font-poppins bg-black/20 hidden" id="Gameover">
+      <div class="max-w-mContainer m-auto">
+        <div class="bg-white py-[199px] px-3 text-center">
+          <h2 id="win" class="font-bold text-[#00d084] text-5xl capitalize"> 
+          </h2>
+
+            <h3 id="PlayerOneResult" class="py-9 font-bold text-[#000000] text-3xl capitalize"></h3>
+
+            <h3 id="PlayerTwoResult" class="font-bold text-[#000000]  text-3xl capitalize"></h3>
+            <h3
+              id="PlayerThreeResult"
+              class="py-9 font-bold text-[#000000]  text-3xl capitalize"
+            ></h3>
+         
+          <h3 class="font-bold text-5xl text-[#ff5e78]">Game Over</h3>
+        </div>
+      </div>
+    </section>
+    <!-- game over page end  -->
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
