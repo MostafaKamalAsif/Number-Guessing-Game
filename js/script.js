@@ -49,9 +49,7 @@ let PlayerOneResult=document.getElementById("PlayerOneResult")
 let PlayerTwoResult=document.getElementById("PlayerTwoResult")
 let PlayerThreeResult=document.getElementById("PlayerThreeResult")
 
-let num1 = parseFloat(p1number.value);
-let num2 = parseFloat(p2number.value);
-let num3 = parseFloat(p3number.value);
+
 
 // Game over page variable end
 
@@ -143,7 +141,9 @@ guess_2.addEventListener("click", ()=>{
     numbererror_3.classList.remove("hidden") 
     }
 
-
+let num1 = parseFloat(p1number.value);
+let num2 = parseFloat(p2number.value);
+let num3 = parseFloat(p3number.value);
 
 if (num1==num2 && num1==num3) {
     
