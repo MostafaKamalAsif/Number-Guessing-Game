@@ -7,14 +7,13 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-400: oklch(70.4% 0.191 22.216);
-    --color-green-400: oklch(79.2% 0.209 151.711);
-    --color-teal-100: oklch(95.3% 0.051 180.801);
+    --color-amber-300: oklch(87.9% 0.169 91.605);
+    --color-yellow-200: oklch(94.5% 0.129 101.54);
+    --color-yellow-300: oklch(90.5% 0.182 98.111);
+    --color-yellow-400: oklch(85.2% 0.199 91.936);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --text-5xl: 3rem;
@@ -178,6 +177,9 @@
   .my-9 {
     margin-block: calc(var(--spacing) * 9);
   }
+  .mb-11 {
+    margin-bottom: calc(var(--spacing) * 11);
+  }
   .mb-11\.5 {
     margin-bottom: calc(var(--spacing) * 11.5);
   }
@@ -186,6 +188,21 @@
   }
   .hidden {
     display: none;
+  }
+  .table {
+    display: table;
+  }
+  .h-\[90\] {
+    height: 90;
+  }
+  .h-\[90px\] {
+    height: 90px;
+  }
+  .h-\[100px\] {
+    height: 100px;
+  }
+  .h-\[px\] {
+    height: px;
   }
   .w-\[778px\] {
     width: 778px;
@@ -196,11 +213,21 @@
   .max-w-mContainer {
     max-width: var(--spacing-mContainer);
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .cursor-pointer {
     cursor: pointer;
   }
+  .resize {
+    resize: both;
+  }
   .rounded-full {
     border-radius: calc(infinity * 1px);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .border-2 {
     border-style: var(--tw-border-style);
@@ -209,11 +236,17 @@
   .border-\[\#D9D9D9\] {
     border-color: #D9D9D9;
   }
+  .border-yellow-200 {
+    border-color: var(--color-yellow-200);
+  }
   .bg-\[\#7041D3\] {
     background-color: #7041D3;
   }
   .bg-\[\#CC3030\] {
     background-color: #CC3030;
+  }
+  .bg-black {
+    background-color: var(--color-black);
   }
   .bg-black\/20 {
     background-color: color-mix(in srgb, #000 20%, transparent);
@@ -227,8 +260,17 @@
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }
+  .px-\[8px\] {
+    padding-inline: 8px;
+  }
+  .px-\[80px\] {
+    padding-inline: 80px;
+  }
   .px-\[86px\] {
     padding-inline: 86px;
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
   }
   .py-2\.5 {
     padding-block: calc(var(--spacing) * 2.5);
@@ -293,6 +335,72 @@
   .capitalize {
     text-transform: capitalize;
   }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+  .outline-\[\#7041D3\] {
+    outline-color: #7041D3;
+  }
+  .outline-\[\#7041D3\]\/70 {
+    outline-color: color-mix(in oklab, #7041D3 70%, transparent);
+  }
+  .outline-amber-300 {
+    outline-color: var(--color-amber-300);
+  }
+  .outline-yellow-300 {
+    outline-color: var(--color-yellow-300);
+  }
+  .duration-500 {
+    --tw-duration: 500ms;
+    transition-duration: 500ms;
+  }
+  .hover\:border {
+    &:hover {
+      @media (hover: hover) {
+        border-style: var(--tw-border-style);
+        border-width: 1px;
+      }
+    }
+  }
+  .hover\:border-yellow-400 {
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--color-yellow-400);
+      }
+    }
+  }
+  .hover\:px-\[90px\] {
+    &:hover {
+      @media (hover: hover) {
+        padding-inline: 90px;
+      }
+    }
+  }
+  .hover\:py-5 {
+    &:hover {
+      @media (hover: hover) {
+        padding-block: calc(var(--spacing) * 5);
+      }
+    }
+  }
+  .hover\:text-\[38px\] {
+    &:hover {
+      @media (hover: hover) {
+        font-size: 38px;
+      }
+    }
+  }
+  .hover\:text-\[38\] {
+    &:hover {
+      @media (hover: hover) {
+        color: 38;
+      }
+    }
+  }
 }
 @property --tw-border-style {
   syntax: "*";
@@ -303,11 +411,22 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
+      --tw-duration: initial;
     }
   }
 }

@@ -24,10 +24,11 @@
             type="text"
             placeholder="What is your name"
             id="p1name"
-            class="rounded-full border-2 border-[#D9D9D9] w-[886px] py-[42px] pl-[52px] my-9"
+            class="rounded-full border-2 border-[#D9D9D9] outline-amber-300 w-[886px] py-[42px] pl-[52px] my-9"
           />
           <button
-            class="py-[15px] px-[86px] mb-11.5 font-bold text-[32px] text-white bg-[#7041D3] rounded-full cursor-pointer"
+            class="py-[15px] px-[86px] mb-11.5 font-bold text-[32px] text-white bg-[#7041D3] rounded-full cursor-pointer
+          "
             id="btnstart_1"
           >
             Start Game
@@ -50,10 +51,10 @@
         <div class="bg-white py-[199px] text-center">
           <h2 class="font-bold text-black text-5xl">Player - 1</h2>
           <input
-            type="number" 
+            type="number"
             placeholder="Give a number"
             id="p1number"
-            class="rounded-full border-2 border-[#D9D9D9] w-[886px] py-[42px] pl-[52px] my-9 block m-auto"
+            class="rounded-full border-2 border-[#D9D9D9] outline-amber-300  w-[886px] py-[42px] pl-[52px] my-9 block m-auto"
           />
           <button
             class="py-[15px] px-[86px] mb-11.5 font-bold text-[32px] text-white bg-[#7041D3] rounded-full cursor-pointer"
@@ -84,7 +85,7 @@
             type="text"
             placeholder="What is your name"
             id="p2name"
-            class="rounded-full border-2 border-[#D9D9D9] w-[886px] py-[42px] pl-[52px] my-9"
+            class="rounded-full border-2 border-[#D9D9D9]  outline-amber-300 w-[886px] py-[42px] pl-[52px] my-9"
           />
           <button
             class="py-[15px] px-[86px] mb-11.5 font-bold text-[32px] text-white bg-[#7041D3] rounded-full cursor-pointer"
@@ -115,7 +116,7 @@
             type="number"
             placeholder="Give a number"
             id="p2number"
-            class="rounded-full border-2 border-[#D9D9D9] w-[886px] py-[42px] pl-[52px] my-9 block m-auto"
+            class="rounded-full border-2 border-[#D9D9D9] outline-amber-300  w-[886px] py-[42px] pl-[52px] my-9 block m-auto"
           />
           <button
             class="py-[15px] px-[86px] mb-11.5 font-bold text-[32px] text-white bg-[#7041D3] rounded-full cursor-pointer"
@@ -146,7 +147,7 @@
             type="text"
             placeholder="What is your name"
             id="p3name"
-            class="rounded-full border-2 border-[#D9D9D9] w-[886px] py-[42px] pl-[52px] my-9"
+            class="rounded-full border-2 border-[#D9D9D9]  outline-amber-300 w-[886px] py-[42px] pl-[52px] my-9"
           />
           <button
             class="py-[15px] px-[86px] mb-11.5 font-bold text-[32px] text-white bg-[#7041D3] rounded-full cursor-pointer"
@@ -177,7 +178,7 @@
             type="number"
             placeholder="Give a number"
             id="p3number"
-            class="rounded-full border-2 border-[#D9D9D9] w-[886px] py-[42px] pl-[52px] my-9 block m-auto"
+            class="rounded-full border-2 border-[#D9D9D9] outline-amber-300  w-[886px] py-[42px] pl-[52px] my-9 block m-auto"
           />
           <button
             class="py-[15px] px-[86px] mb-11.5 font-bold text-[32px] text-white bg-[#7041D3] rounded-full cursor-pointer"
@@ -200,17 +201,25 @@
     <section class="py-[90px] font-poppins bg-black/20 hidden" id="Gameover">
       <div class="max-w-mContainer m-auto">
         <div class="bg-white py-[199px] px-3 text-center">
-          <h2 id="win" class="font-bold text-[#00d084] text-5xl capitalize"> 
-          </h2>
+          <h2
+            id="win"
+            class="font-bold text-[#00d084] text-5xl capitalize"
+          ></h2>
 
-            <h3 id="PlayerOneResult" class="py-9 font-bold text-[#000000] text-3xl capitalize"></h3>
+          <h3
+            id="PlayerOneResult"
+            class="py-9 font-bold text-[#000000] text-3xl capitalize"
+          ></h3>
 
-            <h3 id="PlayerTwoResult" class="font-bold text-[#000000]  text-3xl capitalize"></h3>
-            <h3
-              id="PlayerThreeResult"
-              class="py-9 font-bold text-[#000000]  text-3xl capitalize"
-            ></h3>
-         
+          <h3
+            id="PlayerTwoResult"
+            class="font-bold text-[#000000] text-3xl capitalize"
+          ></h3>
+          <h3
+            id="PlayerThreeResult"
+            class="py-9 font-bold text-[#000000] text-3xl capitalize"
+          ></h3>
+
           <h3 class="font-bold text-5xl text-[#ff5e78]">Game Over</h3>
         </div>
       </div>
