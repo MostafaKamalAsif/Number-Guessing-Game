@@ -8,9 +8,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-amber-300: oklch(87.9% 0.169 91.605);
-    --color-yellow-200: oklch(94.5% 0.129 101.54);
-    --color-yellow-300: oklch(90.5% 0.182 98.111);
-    --color-yellow-400: oklch(85.2% 0.199 91.936);
     --color-yellow-500: oklch(79.5% 0.184 86.047);
     --color-purple-800: oklch(43.8% 0.218 303.724);
     --color-purple-900: oklch(38.1% 0.176 304.987);
@@ -203,14 +200,32 @@
   .table {
     display: table;
   }
-  .h-screen {
-    height: 100vh;
+  .w-900 {
+    width: calc(var(--spacing) * 900);
+  }
+  .w-\[9\] {
+    width: 9;
+  }
+  .w-\[678px\] {
+    width: 678px;
   }
   .w-\[778px\] {
     width: 778px;
   }
+  .w-\[786px\] {
+    width: 786px;
+  }
   .w-\[886px\] {
     width: 886px;
+  }
+  .w-\[900\] {
+    width: 900;
+  }
+  .w-\[900px\] {
+    width: 900px;
+  }
+  .w-\[px\] {
+    width: px;
   }
   .max-w-mContainer {
     max-width: var(--spacing-mContainer);
@@ -223,12 +238,6 @@
   }
   .resize {
     resize: both;
-  }
-  .rounded {
-    border-radius: 0.25rem;
-  }
-  .rounded-3xl {
-    border-radius: var(--radius-3xl);
   }
   .rounded-\[5px\] {
     border-radius: 5px;
@@ -246,10 +255,6 @@
   .border-2 {
     border-style: var(--tw-border-style);
     border-width: 2px;
-  }
-  .border-3 {
-    border-style: var(--tw-border-style);
-    border-width: 3px;
   }
   .border-4 {
     border-style: var(--tw-border-style);
@@ -279,23 +284,11 @@
   .bg-white {
     background-color: var(--color-white);
   }
-  .p-\[150px\] {
-    padding: 150px;
-  }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }
-  .px-\[40px\] {
-    padding-inline: 40px;
-  }
-  .px-\[80\%\] {
-    padding-inline: 80%;
-  }
   .px-\[86px\] {
     padding-inline: 86px;
-  }
-  .px-\[140px\] {
-    padding-inline: 140px;
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
@@ -306,35 +299,23 @@
   .py-9 {
     padding-block: calc(var(--spacing) * 9);
   }
-  .py-\[0px\] {
-    padding-block: 0px;
-  }
-  .py-\[1px\] {
-    padding-block: 1px;
-  }
   .py-\[15px\] {
     padding-block: 15px;
   }
-  .py-\[25px\] {
-    padding-block: 25px;
-  }
   .py-\[42px\] {
     padding-block: 42px;
-  }
-  .py-\[90px\] {
-    padding-block: 90px;
-  }
-  .py-\[150px\] {
-    padding-block: 150px;
-  }
-  .py-\[199px\] {
-    padding-block: 199px;
   }
   .pt-\[25px\] {
     padding-top: 25px;
   }
   .pt-\[150px\] {
     padding-top: 150px;
+  }
+  .pb-\[35px\] {
+    padding-bottom: 35px;
+  }
+  .pb-\[80px\] {
+    padding-bottom: 80px;
   }
   .pb-\[100px\] {
     padding-bottom: 100px;
@@ -359,17 +340,9 @@
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
   }
-  .text-6xl {
-    font-size: var(--text-6xl);
-    line-height: var(--tw-leading, var(--text-6xl--line-height));
-  }
   .text-8xl {
     font-size: var(--text-8xl);
     line-height: var(--tw-leading, var(--text-8xl--line-height));
-  }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
   }
   .text-\[32px\] {
     font-size: 32px;
@@ -381,27 +354,6 @@
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
-  }
-  .text-\[\#00d084\] {
-    color: #00d084;
-  }
-  .text-\[\#000000\] {
-    color: #000000;
-  }
-  .text-\[\#9eff5e\] {
-    color: #9eff5e;
-  }
-  .text-\[\#81ff5e\] {
-    color: #81ff5e;
-  }
-  .text-\[\#7041D3\] {
-    color: #7041D3;
-  }
-  .text-\[\#a9ff5e\] {
-    color: #a9ff5e;
-  }
-  .text-\[\#ff5e78\] {
-    color: #ff5e78;
   }
   .text-black {
     color: var(--color-black);
