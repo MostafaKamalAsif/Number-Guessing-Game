@@ -72,6 +72,7 @@ btnplay.addEventListener("click", ()=>{
       }
        else{
         alert("Give a number between 1 to 50")
+        p1number.value =""
        } 
 
     }
@@ -100,18 +101,20 @@ btnstart_2.addEventListener("click", ()=>{
 // guess button  for player two start
 
 guess_1.addEventListener("click", () => {
-  let num2 = parseFloat(p2number.value);
+   num1 = parseFloat(p1number.value);
+  num2 = parseFloat(p2number.value);
 
-  if (p2number.value === "") {
-    numbererror_2.classList.remove("hidden");
-    return;
-  }
+  if (p2number.value !== "") {
+    
 
-  if (num2 === num1) {
+      if (num2>0 && num2<=50) {
+
+       if (num2 === num1) {
     win.innerText = p2name.value + " is the winner!";
     Gameover.classList.remove("hidden");
     player_2guess.classList.add("hidden");
-  } else {
+  }
+   else {
     attempts++; // ← global counter
     if (attempts < maxAttempts) {
       alert("Wrong guess! Attempts left: " + (maxAttempts - attempts));
@@ -122,6 +125,36 @@ guess_1.addEventListener("click", () => {
       player_2guess.classList.add("hidden");
     }
   }
+  }
+       else{
+        alert("Give a number between 1 to 50")
+        p2number.value =""
+       } 
+    }
+
+    else{
+numbererror_2.classList.remove("hidden");
+
+    }
+
+
+
+
+  // if (num2 === num1) {
+  //   win.innerText = p2name.value + " is the winner!";
+  //   Gameover.classList.remove("hidden");
+  //   player_2guess.classList.add("hidden");
+  // } else {
+  //   attempts++; // ← global counter
+  //   if (attempts < maxAttempts) {
+  //     alert("Wrong guess! Attempts left: " + (maxAttempts - attempts));
+  //     p2number.value = "";
+  //   } else {
+  //     win.innerText = p1name.value + " is the winner!";
+  //     Gameover.classList.remove("hidden");
+  //     player_2guess.classList.add("hidden");
+  //   }
+  // }
   PlayerOneResult.innerHTML=p1name.value+" "+"given number is ="+" "+ num1
  PlayerTwoResult.innerHTML=p2name.value+" "+"guess is ="+" "+num2
 });
