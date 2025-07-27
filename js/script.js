@@ -140,21 +140,6 @@ numbererror_2.classList.remove("hidden");
 
 
 
-  // if (num2 === num1) {
-  //   win.innerText = p2name.value + " is the winner!";
-  //   Gameover.classList.remove("hidden");
-  //   player_2guess.classList.add("hidden");
-  // } else {
-  //   attempts++; // ← global counter
-  //   if (attempts < maxAttempts) {
-  //     alert("Wrong guess! Attempts left: " + (maxAttempts - attempts));
-  //     p2number.value = "";
-  //   } else {
-  //     win.innerText = p1name.value + " is the winner!";
-  //     Gameover.classList.remove("hidden");
-  //     player_2guess.classList.add("hidden");
-  //   }
-  // }
   PlayerOneResult.innerHTML=p1name.value+" "+"given number is ="+" "+ num1
  PlayerTwoResult.innerHTML=p2name.value+" "+"guess is ="+" "+num2
 });
