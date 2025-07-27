@@ -36,6 +36,8 @@ let win=document.getElementById("win")
 let PlayerOneResult=document.getElementById("PlayerOneResult")
 let PlayerTwoResult=document.getElementById("PlayerTwoResult")
 let num1,num2
+let attempts = 0;
+let maxAttempts = 5;
 
 // Game over page variable end
 
@@ -64,12 +66,12 @@ btnplay.addEventListener("click", ()=>{
 
     if (!p1number.value == "") {
 
-      if (num1>0 && num1<=100) {
+      if (num1>0 && num1<=50) {
         player_2start.classList.remove("hidden") 
       player_1.classList.add("hidden") 
       }
        else{
-        alert("Give a number between 1 to 100")
+        alert("Give a number between 1 to 50")
        } 
 
     }
@@ -96,42 +98,33 @@ btnstart_2.addEventListener("click", ()=>{
 // start play button  for player two end
 
 // guess button  for player two start
-guess_1.addEventListener("click", ()=>{
-     num1 = parseFloat(p1number.value);
- num2 = parseFloat(p2number.value);
 
+guess_1.addEventListener("click", () => {
+  let num2 = parseFloat(p2number.value);
 
-    if (!p2number.value == "") {
-       if (num2>0 && num2<=100) {
-        Gameover.classList.remove("hidden") 
-      player_2guess.classList.add("hidden") 
-      }
-       else{
-        alert("Give a number between 1 to 100")
-       } 
- 
+  if (p2number.value === "") {
+    numbererror_2.classList.remove("hidden");
+    return;
+  }
+
+  if (num2 === num1) {
+    win.innerText = p2name.value + " is the winner!";
+    Gameover.classList.remove("hidden");
+    player_2guess.classList.add("hidden");
+  } else {
+    attempts++; // ← global counter
+    if (attempts < maxAttempts) {
+      alert("Wrong guess! Attempts left: " + (maxAttempts - attempts));
+      p2number.value = "";
+    } else {
+      win.innerText = p1name.value + " is the winner!";
+      Gameover.classList.remove("hidden");
+      player_2guess.classList.add("hidden");
     }
-    else{
-    numbererror_2.classList.remove("hidden") 
-    
-   }
-
-
-
-
-
-   if (num1==num2) {
-        
-  win.innerText=p2name.value +" "+"is the winner." 
-  
-}
-else{
-  win.innerText=p1name.value +" "+"is the winner." 
-}
-
-PlayerOneResult.innerHTML=p1name.value+" "+"given number is ="+" "+ num1
-PlayerTwoResult.innerHTML=p2name.value+" "+"guess is ="+" "+num2
-})
+  }
+  PlayerOneResult.innerHTML=p1name.value+" "+"given number is ="+" "+ num1
+ PlayerTwoResult.innerHTML=p2name.value+" "+"guess is ="+" "+num2
+});
 // guess button  for player two end
 
     
