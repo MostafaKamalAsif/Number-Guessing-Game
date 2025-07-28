@@ -101,6 +101,7 @@ btnstart_2.addEventListener("click", ()=>{
 // guess button  for player two start
 
 guess_1.addEventListener("click", () => {
+  
    num1 = parseFloat(p1number.value);
   num2 = parseFloat(p2number.value);
 
@@ -117,7 +118,10 @@ guess_1.addEventListener("click", () => {
    else {
     attempts++; // ← global counter
     if (attempts < maxAttempts) {
-      alert("Wrong guess! Attempts left: " + (maxAttempts - attempts));
+      
+      numbererror_2.innerText="Wrong guess! Attempts left: " + (maxAttempts - attempts)
+      numbererror_2.style.background="blue"
+      numbererror_2.classList.remove("hidden")
       p2number.value = "";
     } else {
       win.innerText = p1name.value + " is the winner!";
