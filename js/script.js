@@ -137,9 +137,6 @@ numbererror_2.classList.remove("hidden");
 
     }
 
-
-
-
   PlayerOneResult.innerHTML=p1name.value+" "+"given number is ="+" "+ num1
  PlayerTwoResult.innerHTML=p2name.value+" "+"guess is ="+" "+num2
 });
